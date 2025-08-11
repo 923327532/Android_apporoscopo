@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Colores adicionales -->
+    <color name="primary">#1f1f1f</color>         <!-- Azul -->
+    <color name="primaryDark">#181818</color>     <!-- Azul más oscuro -->
+    <color name="secondary">#B68134</color>       <!-- Verde -->
+    <color name="accent">#FFFFFF</color>          <!-- Rosa fuerte -->
+    <color name="gold">#FFD700</color>            <!-- Dorado -->
+    <color name="black_alpha">#80000000</color>
+    <color name="red">#FF0000</color>
+
+</resources>
