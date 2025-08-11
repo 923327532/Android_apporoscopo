@@ -7,30 +7,52 @@
     android:layout_height="match_parent"
     tools:context=".Ui.home.MainActivity">
 
-    
+    <!-- Barra superior con texto -->
+    <FrameLayout
+        android:id="@+id/toolbar"
+        android:background="@color/primaryDark"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/sciense"
+            android:text="@string/app_name"
+            android:textColor="@color/secondary"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <!-- Contenedor para el NavHostFragment -->
     <androidx.fragment.app.FragmentContainerView
-        android:id= "@+id/fragmentContainerView"
+        android:id="@+id/fragmentContainerView"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:navGraph="@navigation/main_grafh"
         app:defaultNavHost="true"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintBaseline_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttomNavView" />
 
+    <!-- Barra de navegación inferior -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/buttomNavView"
         android:layout_width="0dp"
-        android:background="@color/primaryDark"
         android:layout_height="wrap_content"
+        android:background="@color/primaryDark"
         app:itemIconTint="@color/bottom_nav_selector"
         app:itemTextColor="@color/bottom_nav_selector"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:itemActiveIndicatorStyle="@null"
-        app:menu="@menu/botton_menu"/>
-
+        app:menu="@menu/botton_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
